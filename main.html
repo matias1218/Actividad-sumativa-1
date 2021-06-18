@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <!-- BARRA DE NAVEGACION -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="https://toppng.com/uploads/preview/technology-icon-orange-information-technology-icon-115535310117amjuxxw3e.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            TecnoCenter
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="login.html">Iniciar sesión </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="registro.html">Registrese aquí</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+
+    <div>
+        <div class="row">
+            <div class="col">
+                <img src="wallpaper1.jpg" class="img-responsive fit-image" alt="">
+                <h1 class="centered">TECNOCENTER</h1>
+                <h3 class="centered2">Tu tienda digital</h3>
+                
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="row">
+        <div class="col-md-12">
+            <div class="jumbotron">
+                <p class="lead">Nuevas novedades en telefonia movil</p> 
+                </div>
+        </div>
+    </div>
+    
+
+    <!-- catalogo de productos 1-->
+    <div class="container-fluid px-5">
+        <div class="row">
+            <div class="col-md-9">
+
+                <!-- Barra de filtrado por categoria de Marca y paginacion-->
+                <div class="card-hov" >
+					<div class="card-body">
+						
+						  <div class="container">
+						  	 <div class="row">
+						  	 	<div class="col-md-6">
+								<form >
+								  	<div class="input-group ">
+									  
+									  <div class="input-group-prepend">
+									    <button class="input-group-text btn btn-primary" for="inputGroupSelect01" id="botonFiltrar" name="action" value="filter" type="submit" disabled>Filtrar</button>
+									  </div>
+									  <select class="form-control" id="categoria" name="categoria1">
+                                        <option value="telefonia" disabled selected>Ver Marcas</option>
+								        <option value="telefonia" >Apple</option>
+								        <option value="pc">Samsung</option>
+								        <option value="pc">Xiaomi</option>
+								      </select>
+								      <div class="input-group-prepend">
+									    <button class="input-group-text btn btn-primary" for="inputGroupSelect01" name="action" value="reset" type="submit" >Todos</button>
+									  </div>
+									</div>
+								</form>
+							  </div>
+							  <div class="col-md-6 d-flex flex-row-reverse" >
+							  <span></span>
+                              <nav aria-label="Page navigation example">
+                                <ul class="pagination">
+                                  <li class="page-item"><a class="page-link" >Anterior</a></li>
+                                  <li class="page-item"><a class="page-link" >1</a></li>
+                                  <li class="page-item"><a class="page-link" >2</a></li>
+                                  <li class="page-item"><a class="page-link" >3</a></li>
+                                  <li class="page-item"><a class="page-link" >Siguiente</a></li>
+                                </ul>
+                              </nav>
+							  </div>
+						  	 </div>
+						  </div>
+						
+					</div>
+					
+				</div>
+				<br>
+
+                <!-- productos -->
+                <div class="card-hov" >
+                    <ul class="list-group list-group-flush">
+
+                      <!-- lista de productos -->
+                      <li class="list-group-item">
+                          <div class="container-fluid">
+                              <div class="row">
+                                  <div class="col-md-3 d-flex align-items-stretch">
+                                      <div class="card" >
+                                        <div class="card-body">
+                                          <img class="card-img-top" src="https://home.ripley.cl/store/Attachment/WOP/D191/2000382489835/2000382489835_2.jpg" alt="Card image cap">
+                                        </div>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-9">
+                                      <div class="card" >
+                                        <div class="card-body">
+                                          <h5 class="card-title" id="producto1">IPHONE 11 64GB BLANCO</h5>
+                                          <h6 class="card-subtitle mb-2 text-muted">Stock: 99</h6>
+                                          <p class="card-text">Deslumbra con el iPhone 11 de 64GB de almacenamiento. Modelo de funcionamiento basado en Chip A13 Bionic.</p>
+                                          <div class="container-fluid p-0">
+                                              <div class="row">
+                                                  <div class="col-md-12">
+                                                      <strong><p style="text-align: right;" id="precio1">850.990$</p></strong>
+                                                  </div>
+                                              </div>
+                                              <div class="row">
+                                                  <div class="col-md-9">
+                                                  </div>
+                                                  <div class="col-md-3">
+                                                      <div class="input-group ">
+                                                            <div class="input-group-prepend">
+                                                              <button class="btn btn-outline-secondary"  type="button" onclick="quitar(1)">-</button>
+                                                          </div>
+                                                          <input type="text"  class="form-control" disabled aria-describedby="basic-addon1" value="0" id="valor1">
+                                                          <div class="input-group-prepend">
+                                                              <button class="btn btn-outline-secondary"  type="button" onclick="agregar(1)">+</button>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="list-group-item">
+                          <div class="container-fluid">
+                              <div class="row">
+                                  <div class="col-md-3 d-flex align-items-stretch">
+                                      <div class="card" >
+                                        <div class="card-body">
+                                          <img class="card-img-top" src="https://home.ripley.cl/store/Attachment/WOP/D191/2000381280235/2000381280235_2.jpg" alt="Card image cap">
+                                        </div>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-9">
+                                      <div class="card" >
+                                        <div class="card-body">
+                                          <h5 class="card-title" id="producto2">IPHONE SE 64 GB NEGRO</h5>
+                                          <h6 class="card-subtitle mb-2 text-muted">Stock: 44</h6>
+                                          <p class="card-text">Recorre las potencialidades del IPhone SE de 64GB de Apple. Apuesta concreta y sólida para que obtengas la mejor comunicación posible. </p>
+                                          <div class="container-fluid p-0">
+                                              <div class="row">
+                                                  <div class="col-md-12">
+                                                      <strong><p style="text-align: right;" id="precio2">950.990$</p></strong>
+                                                  </div>
+                                              </div>
+                                              <div class="row">
+                                                  <div class="col-md-9">
+                                                  </div>
+                                                  <div class="col-md-3">
+                                                      <div class="input-group ">
+                                                            <div class="input-group-prepend">
+                                                              <button class="btn btn-outline-secondary"  type="button" onclick="quitar(2)">-</button>
+                                                          </div>
+                                                          <input type="text"  class="form-control" disabled aria-describedby="basic-addon1" value="0" id="valor2">
+                                                          <div class="input-group-prepend">
+                                                              <button class="btn btn-outline-secondary"  type="button" onclick="agregar(2)">+</button>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="list-group-item">
+                          <div class="container-fluid">
+                              <div class="row">
+                                  <div class="col-md-3 d-flex align-items-stretch">
+                                      <div class="card" >
+                                        <div class="card-body">
+                                          <img class="card-img-top" src="https://home.ripley.cl/store/Attachment/WOP/D191/2000380825543/2000380825543_2.jpg" alt="Card image cap">
+                                        </div>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-9">
+                                      <div class="card" >
+                                        <div class="card-body">
+                                          <h5 class="card-title" id="producto3">SAMSUNG GALAXY S20 FE 128GB VIOLETA</h5>
+                                          <h6 class="card-subtitle mb-2 text-muted">Stock: 89</h6>
+                                          <p class="card-text">Sorpréndete con este equipo elegante con una pantalla Super Amoled de 6,5” y un diseño único con terminaciones finas para un agarre más cómodo.</p>
+                                          <div class="container-fluid p-0">
+                                              <div class="row">
+                                                  <div class="col-md-12">
+                                                      <strong><p style="text-align: right;" id="precio3">350.990$</p></strong>
+                                                  </div>
+                                              </div>
+                                              <div class="row">
+                                                  <div class="col-md-9">
+                                                  </div>
+                                                  <div class="col-md-3">
+                                                      <div class="input-group ">
+                                                            <div class="input-group-prepend">
+                                                              <button class="btn btn-outline-secondary"  type="button" onclick="quitar(3)">-</button>
+                                                          </div>
+                                                          <input type="text"  class="form-control" disabled aria-describedby="basic-addon1" value="0" id="valor3">
+                                                          <div class="input-group-prepend">
+                                                              <button class="btn btn-outline-secondary"  type="button" onclick="agregar(3)">+</button>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+
+                    </ul>
+                </div> 
+
+
+            </div>
+            <div class="col-md-3">
+                <!-- CARRITO DE COMPRAS -->
+                <div class="card-hov" id="carrito" >
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <div class="card" >
+                          <div class="card-body">
+                            <h5 class="card-title">Carrito de compras</h5>
+                            <!-- FILA POR CADA PRODUCTO AGREGADO -->
+                                <div class="container px-0" id="canastaContainer">
+                                    
+                                </div>
+                            <!-- SECCION DE PRECIO TOTAL -->
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <p class="card-text mb-1">Subtotal</p>
+                                        
+                                    </div>
+                                    <div class="col-md-5">
+                                        <p class="card-text mb-1" style="text-align: right;" id="subtotal"></p>
+                                    </div>
+                                </div>
+                            <!-- BOTON DE CONFIRMACION DE CARRITO -->
+                                <form >
+                                    <input hidden type="hidden" />
+                                    <div class="row pt-3">
+                                        <button type="button" class="btn btn-success btn-block">Ver carrito</button>
+                                    </div>
+                                
+                                
+                                </form>
+                            
+                                
+                          </div>
+                        </div>
+                    </li>
+                  </ul>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <!-- Separador de productos -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="jumbotron">
+                <p class="lead">Nuevas novedades en Computación</p> 
+                </div>
+        </div>
+    </div>
+
+    <!-- catalogo de productos 2-->
+    <div class="container-fluid px-5">
+        <div class="row">
+            <div class="col-md-9">
+
+                <!-- Barra de filtrado por categoria de Marca y paginacion-->
+                <div class="card-hov" >
+					<div class="card-body">
+						
+						  <div class="container">
+						  	 <div class="row">
+						  	 	<div class="col-md-6">
+								<form >
+								  	<div class="input-group ">
+									  
+									  <div class="input-group-prepend">
+									    <button class="input-group-text btn btn-primary" for="inputGroupSelect01" id="botonFiltrar2" name="action" value="filter" type="submit" disabled>Filtrar</button>
+									  </div>
+									  <select class="form-control" id="categoria2" name="categoria2">
+                                        <option value="telefonia" disabled selected>Ver Marcas</option>
+								        <option value="telefonia" >Hp</option>
+								        <option value="pc">Asus</option>
+								        <option value="pc">Apple</option>
+								      </select>
+								      <div class="input-group-prepend">
+									    <button class="input-group-text btn btn-primary" for="inputGroupSelect01" name="action" value="reset" type="submit" >Todos</button>
+									  </div>
+									</div>
+								</form>
+							  </div>
+							  <div class="col-md-6 d-flex flex-row-reverse" >
+							  <span></span>
+                              <nav aria-label="Page navigation example">
+                                <ul class="pagination">
+                                  <li class="page-item"><a class="page-link" >Anterior</a></li>
+                                  <li class="page-item"><a class="page-link" >1</a></li>
+                                  <li class="page-item"><a class="page-link" >2</a></li>
+                                  <li class="page-item"><a class="page-link" >3</a></li>
+                                  <li class="page-item"><a class="page-link" >Siguiente</a></li>
+                                </ul>
+                              </nav>
+							  </div>
+						  	 </div>
+						  </div>
+						
+					</div>
+					
+				</div>
+				<br>
+
+                <!-- productos -->
+                <div class="card-hov" >
+                    <ul class="list-group list-group-flush">
+
+                      <!-- lista de productos -->
+                      <li class="list-group-item">
+                          <div class="container-fluid">
+                              <div class="row">
+                                  <div class="col-md-3 d-flex align-items-stretch">
+                                      <div class="card" >
+                                        <div class="card-body">
+                                          <img class="card-img-top" src="https://home.ripley.cl/store/Attachment/WOP/D113/2000383487342/2000383487342_2.jpg" alt="Card image cap">
+                                        </div>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-9">
+                                      <div class="card" >
+                                        <div class="card-body">
+                                          <h5 class="card-title" id="producto4">HP 15-DK1043LA / INTEL® CORE™ I5 / 8GB RAM / 512GB SSD / NVIDIA GEFORCE GTX 1650 TI / 15.6" FHD</h5>
+                                          <h6 class="card-subtitle mb-2 text-muted">Stock: 60</h6>
+                                          <p class="card-text">Potencia tu jornada. Potencia tu juego: Realiza todo tipo de tareas con el procesador Intel® Core™ y los gráficos NVIDIA® GeForce. Una pantalla de alta resolución</p>
+                                          <div class="container-fluid p-0">
+                                              <div class="row">
+                                                  <div class="col-md-12">
+                                                      <strong><p style="text-align: right;" id="precio4">950.990$</p></strong>
+                                                  </div>
+                                              </div>
+                                              <div class="row">
+                                                  <div class="col-md-9">
+                                                  </div>
+                                                  <div class="col-md-3">
+                                                      <div class="input-group ">
+                                                            <div class="input-group-prepend">
+                                                              <button class="btn btn-outline-secondary"  type="button" onclick="quitar(4)">-</button>
+                                                          </div>
+                                                          <input type="text"  class="form-control" disabled aria-describedby="basic-addon1" value="0" id="valor4">
+                                                          <div class="input-group-prepend">
+                                                              <button class="btn btn-outline-secondary"  type="button" onclick="agregar(4)">+</button>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="list-group-item">
+                          <div class="container-fluid">
+                              <div class="row">
+                                  <div class="col-md-3 d-flex align-items-stretch">
+                                      <div class="card" >
+                                        <div class="card-body">
+                                          <img class="card-img-top" src="https://home.ripley.cl/store/Attachment/WOP/D113/2000382093681/2000382093681_2.jpg" alt="Card image cap">
+                                        </div>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-9">
+                                      <div class="card" >
+                                        <div class="card-body">
+                                          <h5 class="card-title" id="producto5">ASUS LAPTOP X415EA / INTEL® CORE™ I5 / 8GB RAM / 512GB SSD / INTEL UHD GRAPHICS / 14</h5>
+                                          <h6 class="card-subtitle mb-2 text-muted">Stock: 24</h6>
+                                          <p class="card-text">Notebook Asus X415EA, un modelo ideal para que cumplas con tus tareas diarias, tus clases en línea o ver tus series favoritas. </p>
+                                          <div class="container-fluid p-0">
+                                              <div class="row">
+                                                  <div class="col-md-12">
+                                                      <strong><p style="text-align: right;" id="precio5">950.990$</p></strong>
+                                                  </div>
+                                              </div>
+                                              <div class="row">
+                                                  <div class="col-md-9">
+                                                  </div>
+                                                  <div class="col-md-3">
+                                                      <div class="input-group ">
+                                                            <div class="input-group-prepend">
+                                                              <button class="btn btn-outline-secondary"  type="button" onclick="quitar(5)">-</button>
+                                                          </div>
+                                                          <input type="text"  class="form-control" disabled aria-describedby="basic-addon1" value="0" id="valor5">
+                                                          <div class="input-group-prepend">
+                                                              <button class="btn btn-outline-secondary"  type="button" onclick="agregar(5)">+</button>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="list-group-item">
+                          <div class="container-fluid">
+                              <div class="row">
+                                  <div class="col-md-3 d-flex align-items-stretch">
+                                      <div class="card" >
+                                        <div class="card-body">
+                                          <img class="card-img-top" src="https://home.ripley.cl/store/Attachment/WOP/D113/2000381074056/2000381074056_2.jpg" alt="Card image cap">
+                                        </div>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-9">
+                                      <div class="card" >
+                                        <div class="card-body">
+                                          <h5 class="card-title" id="producto6">NOTEBOOK HP 14-CK2091LA / INTEL® CORE™ I3 / 4GB RAM / 128GB SSD / INTEL UHD GRAPHICS / 14</h5>
+                                          <h6 class="card-subtitle mb-2 text-muted">Stock: 89</h6>
+                                          <p class="card-text">HP Laptop 14-ck2091la. Laptop delgada y a la moda, con hasta 11 horas de batería. Creada con un diseño delgado y moderno para mantenerte conectado y con todas las tareas bajo control, con rendimiento confiable y batería duradera.</p>
+                                          <div class="container-fluid p-0">
+                                              <div class="row">
+                                                  <div class="col-md-12">
+                                                      <strong><p style="text-align: right;" id="precio6">550.990$</p></strong>
+                                                  </div>
+                                              </div>
+                                              <div class="row">
+                                                  <div class="col-md-9">
+                                                  </div>
+                                                  <div class="col-md-3">
+                                                      <div class="input-group ">
+                                                            <div class="input-group-prepend">
+                                                              <button class="btn btn-outline-secondary"  type="button" onclick="quitar(6)">-</button>
+                                                          </div>
+                                                          <input type="text"  class="form-control" disabled aria-describedby="basic-addon1" value="0" id="valor6">
+                                                          <div class="input-group-prepend">
+                                                              <button class="btn btn-outline-secondary"  type="button" onclick="agregar(6)">+</button>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+                    </ul>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer class="mainfooter" role="contentinfo">
+        <div class="footer-middle">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 col-sm-4">
+              <!--Column1-->
+              <div class="footer-pad">
+                <h4>Contacto</h4>
+                <ul class="list-unstyled">
+                  <li><a href="#">+569-98578547</a></li>
+                  <li><a href="#">contacto@TecnoCenter.com</a></li>
+    
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-4">
+              <!--Column1-->
+              <div class="footer-pad">
+                <h4>Oficinas</h4>
+                <ul class="list-unstyled">
+                  <li><a href="#">Estacion central</a></li>
+                  <li><a href="#">Temuco</a></li>
+
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-4">
+              <!--Column1-->
+              <div class="footer-pad">
+                <h4>Redes sociales</h4>
+                <ul class="list-unstyled">
+                  <li><a href="#">Instagram</a></li>
+                  <li><a href="#">Facebook</a></li>
+                  <li><a href="#">Linekdin</a></li>
+                  <li><a href="#">Twitter</a></li>
+
+           
+                </ul>
+              </div>
+            </div>
+              
+          </div>
+          <div class="row">
+              <div class="col-md-12 copy">
+                  <p class="text-center">&copy;TecnoCenter</p>
+              </div>
+          </div>
+      
+      
+        </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+        var productos = [];
+        var precioTotal = 0;
+        function agregar(id){
+            var contador = parseInt(document.getElementById("valor"+id).value);
+            console.log(contador);
+            if(contador>=0){
+                document.getElementById("valor"+id).value = contador+1;
+            }
+            var precio = document.getElementById("precio"+id).textContent;
+            precio = precio.replace(".","")
+            precio = parseInt(precio);
+            precioTotal += precio;
+            document.getElementById("subtotal").textContent = precioTotal+"$";
+        }
+        function quitar(id){
+            var contador = parseInt(document.getElementById("valor"+id).value);
+            console.log(contador);
+            if(contador>0){
+                document.getElementById("valor"+id).value = contador-1;
+            }
+            var precio = document.getElementById("precio"+id).textContent;
+            precio = precio.replace(".","")
+            precio = parseInt(precio);
+            precioTotal -= precio;
+            document.getElementById("subtotal").textContent = precioTotal+"$";
+        }
+    </script>
+
+
+
+
+
+ 
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
